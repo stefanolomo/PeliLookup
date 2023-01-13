@@ -1,0 +1,19 @@
+:root{
+	/*? Sizes */
+	--l: 0.2rem;
+	--xl: 0.4rem;
+	--xxl: 0.8rem;
+	--xxxl: 1.2rem;
+	--xxxxl: 2.2rem;
+	--xxxxxl: 4.2rem;
+	/*? Colors */
+	--input-bg: #333;
+	--select-bg: #282828;
+	--search-bg: #28c228;
+	--text-color: #fcfcfc;
+	--info-bg: rgba(83, 83, 83, 0.685);
+	--info-bg-lighter: rgba(83, 83, 83, 0.418);
+	--download-bg: #3e8f3e;
+	--main-bg: rgba(24,24,24,.8);
+	--secondary-bg: #171717;
+}

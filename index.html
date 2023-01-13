@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Peli LookUp</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+	<main>
+		<section class="search-container">
+			<div class="search-bar-container">
+				<input placeholder="Película, actor o director" class="search-bar" type="text">
+				<input type="submit" value="Buscar" class="search-btn" onclick="SearchMovie()"></input>
+			</div>
+			<div class="toggle-options">
+				<button><span class="material-symbols-outlined toggleOptions">expand_more</span></button>
+			</div>
+			<div class="options-container hidden">
+				<div class="option">
+					<b>Calidad</b>
+					<select name="quality" id="calidad">
+						<option value="all" selected>Todas</option>
+						<option value="480p">480p</option>
+						<option value="720p">720p</option>
+						<option value="1080p">1080p</option>
+						<option value="2160p">2160p</option>
+						<option value="3D">3D</option>
+					</select>
+				</div>
+				<div class="option">
+					<b>Genero</b>
+					<select name="genre" id="genre">
+						<option value="all" selected>Todos</option>
+						<option value="action">Acción</option>
+						<option value="adventure">Aventura</option>
+						<option value="animation">Animación</option>
+						<option value="biography">Biografía</option>
+						<option value="comedy">Comedia</option>
+						<option value="crime">Crimen</option>
+						<option value="documentary">Documental</option>
+						<option value="drama">Drama</option>
+						<option value="family">Familia</option>
+						<option value="fantasy">Fantasía</option>
+						<option value="film-noir">Film-Noir</option>
+						<option value="game-show">Programa de juego</option>
+						<option value="history">Historia</option>
+						<option value="horror">Terror</option>
+						<option value="music">Música</option>
+						<option value="musical">Musical</option>
+						<option value="mystery">Mysterio</option>
+						<option value="news">Noticias</option>
+						<option value="reality-tv">Reality-TV</option>
+						<option value="romance">Romance</option>
+						<option value="sci-fi">Ciencia Ficción</option>
+						<option value="sport">Deporte</option>
+						<option value="talk-show">Programa de entrevistas</option>
+						<option value="thriller">Suspense</option>
+						<option value="war">Guerra</option>
+						<option value="western">Western</option>
+
+					</select>
+				</div>
+				<div class="option">
+					<b>Reseñas</b>
+					<select name="rating" id="rating">
+						<option value="0" selected disabled>Todas</option>
+						<option value="9">9+</option>
+						<option value="8">8+</option>
+						<option value="7">7+</option>
+						<option value="6">6+</option>
+						<option value="5">5+</option>
+						<option value="4">4+</option>
+						<option value="3">3+</option>
+						<option value="2">2+</option>
+						<option value="1">1+</option>
+					</select>
+				</div>
+				<div class="option">
+					<b>Año</b>
+					<select name="year" id="year">
+						<option value="0">Todos</option>
+						<option value="2022">2022</option>
+						<option value="2021">2021</option>
+						<option value="2020">2020</option>
+						<option value="2019">2019</option>
+						<option value="2015-2018">2015-2018</option>
+						<option value="2010-2014">2010-2014</option>
+						<option value="2000-2009">2000-2009</option>
+						<option value="1990-1999">1990-1999</option>
+						<option value="1980-1989">1980-1989</option>
+						<option value="1970-1979">1970-1979</option>
+						<option value="1950-1969">1950-1969</option>
+						<option value="1900-1949">1900-1949</option>
+					</select>
+				</div>
+			</div>
+		</section>
+		<section class="movies-container">
+			<!--<div class="movie" style="background-image: url('https://img.yts.mx/assets/images/movies/dog_gone_2023/background.jpg')">
+				<div class="top">
+					<div class="left">
+						<img loading="lazy" src="https://img.yts.mx/assets/images/movies/dog_gone_2023/medium-cover.jpg" alt="">
+					</div>
+					<div class="right">
+						<div class="top">
+							<h1 class="title">Dog Goneaaaaaaaa (2023)</h1>
+							<a class="not-a" href="https://www.imdb.com/title/tt15334430/"><h3 class="rating info">⭐ 5/10</h3></a>
+						</div>
+						<div class="bottom">
+							<div class="genres"><em>Drama, Biography, Family</em></div>
+							<p class="description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, iure!
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="lang info">🌐: EN</div>
+					<div class="date info">2023-01-13 09:40:42</div>
+					<a class="not-a" href="https://www.youtube.com/watch?v=q4rdxpc3wk0">
+						<div class="trailer info"><span class="material-symbols-outlined">play_arrow</span> Ver trailer</div>
+					</a>
+					<div class="download info">
+						<span class="material-symbols-outlined">download</span> Descargar Torrent
+					</div>
+				</div>
+			</div>-->
+		</section>
+	</main>
+	<script src="./js/searchFilm.js"></script>
+	<script src="./js/toggleGlow.js"></script>
+	<script src="./js/toggleOptions.js"></script>
+</body>
+
+</html>
