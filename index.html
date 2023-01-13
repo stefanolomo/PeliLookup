@@ -100,29 +100,33 @@
 			</div>
 		</section>
 		<section class="movies-container">
-			<!--<div class="movie" style="background-image: url('https://img.yts.mx/assets/images/movies/dog_gone_2023/background.jpg')">
+			<!--<div class="movie" style="background-image: url('${background}')">
 				<div class="top">
 					<div class="left">
-						<img loading="lazy" src="https://img.yts.mx/assets/images/movies/dog_gone_2023/medium-cover.jpg" alt="">
+						<img loading="lazy" src="${img}" alt="">
 					</div>
 					<div class="right">
 						<div class="top">
-							<h1 class="title">Dog Goneaaaaaaaa (2023)</h1>
-							<a class="not-a" href="https://www.imdb.com/title/tt15334430/"><h3 class="rating info">⭐ 5/10</h3></a>
+							<h1 class="title">${title}</h1>
+							<a class="not-a" href="https://www.imdb.com/title/${ImdbId}/">
+								<h3 class="rating info">⭐ ${rating}</h3>
+							</a>
 						</div>
 						<div class="bottom">
-							<div class="genres"><em>Drama, Biography, Family</em></div>
-							<p class="description">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, iure!
-							</p>
+							<div class="genres"><em>${genres}</em></div>
+							<details class="description">
+								<h2></h2><summary>Ver Resumen</summary></h2>
+								<p>${desc}</p>
+							  </details>
 						</div>
 					</div>
 				</div>
 				<div class="bottom">
-					<div class="lang info">🌐: EN</div>
-					<div class="date info">2023-01-13 09:40:42</div>
-					<a class="not-a" href="https://www.youtube.com/watch?v=q4rdxpc3wk0">
-						<div class="trailer info"><span class="material-symbols-outlined">play_arrow</span> Ver trailer</div>
+					<div class="lang info">🌐: ${lang}</div>
+					<div class="date info">${date}</div>
+					<a class="not-a" href="https://www.youtube.com/watch?v=${YoutubeTrailerId}/">
+						<div class="trailer info"><span class="material-symbols-outlined">play_arrow</span> Ver trailer
+						</div>
 					</a>
 					<div class="download info">
 						<span class="material-symbols-outlined">download</span> Descargar Torrent

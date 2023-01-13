@@ -9,7 +9,7 @@
 
 const api = "https://yts.mx/api/v2/";
 //* Parametros de busqueda
-const queryTerm = document.querySelector(".search-bar")
+const queryTerm = document.querySelector(".search-bar");
 const quality = document.querySelector("#calidad");
 const genre = document.querySelector("#genre");
 const rating = document.querySelector("#rating");
@@ -52,13 +52,16 @@ const CreateNewFilm = (JsonApiOutput) => {
 			<div class="right">
 				<div class="top">
 					<h1 class="title">${title}</h1>
-					<a class="not-a" href="https://www.imdb.com/title/${ImdbId}/"><h3 class="rating info">⭐ ${rating}</h3></a>
+					<a class="not-a" href="https://www.imdb.com/title/${ImdbId}/">
+						<h3 class="rating info">⭐ ${rating}</h3>
+					</a>
 				</div>
 				<div class="bottom">
 					<div class="genres"><em>${genres}</em></div>
-					<p class="description">
-						${desc}
-					</p>
+					<details class="description">
+						<h2></h2><summary>Ver Resumen</summary></h2>
+						<p>${desc}</p>
+					  </details>
 				</div>
 			</div>
 		</div>
@@ -66,7 +69,8 @@ const CreateNewFilm = (JsonApiOutput) => {
 			<div class="lang info">🌐: ${lang}</div>
 			<div class="date info">${date}</div>
 			<a class="not-a" href="https://www.youtube.com/watch?v=${YoutubeTrailerId}/">
-				<div class="trailer info"><span class="material-symbols-outlined">play_arrow</span> Ver trailer</div>
+				<div class="trailer info"><span class="material-symbols-outlined">play_arrow</span> Ver trailer
+				</div>
 			</a>
 			<div class="download info">
 				<span class="material-symbols-outlined">download</span> Descargar Torrent
@@ -85,13 +89,16 @@ const DeleteMovies = () => {
 };
 
 const SearchMovie = () => {
-	DeleteMovies()
-	ApiCall(`list_movies.json?quality=${quality.value}&minimum_rating=${rating.value}&query_term=${queryTerm.value}&genre=${genre.value}`, CreateNewFilm)
-}
+	DeleteMovies();
+	ApiCall(
+		`list_movies.json?quality=${quality.value}&minimum_rating=${rating.value}&query_term=${queryTerm.value}&genre=${genre.value}`,
+		CreateNewFilm
+	);
+};
 
 const GetMagnetLink = (Obj, Pos) => {
-	let tempalte = `magnet:?xt=urn:btih:DC3F9C674142698709290C1B49071EA46A5E5C8E&dn=https://yts.mx/torrent/download/DC3F9C674142698709290C1B49071EA46A5E5C8E&tr=udp://open.demonii.com:1337/announceudp://tracker.openbittorrent.com:80udp://tracker.coppersurfer.tk:6969udp://glotorrents.pw:6969/announceudp://tracker.opentrackr.org:1337/announceudp://torrent.gresille.org:80/announceudp://p4p.arenabg.com:1337udp://tracker.leechers-paradise.org:6969`
-}
+	let tempalte = `magnet:?xt=urn:btih:DC3F9C674142698709290C1B49071EA46A5E5C8E&dn=https://yts.mx/torrent/download/DC3F9C674142698709290C1B49071EA46A5E5C8E&tr=udp://open.demonii.com:1337/announceudp://tracker.openbittorrent.com:80udp://tracker.coppersurfer.tk:6969udp://glotorrents.pw:6969/announceudp://tracker.opentrackr.org:1337/announceudp://torrent.gresille.org:80/announceudp://p4p.arenabg.com:1337udp://tracker.leechers-paradise.org:6969`;
+};
 
 const ApiCall = (path, callback) => {
 	fetch(`${api}${path}`)
