@@ -96,14 +96,15 @@ const SearchMovie = () => {
 	);
 };
 
-const GetMagnetLink = (Obj, Pos) => {
-	let tempalte = `magnet:?xt=urn:btih:DC3F9C674142698709290C1B49071EA46A5E5C8E&dn=https://yts.mx/torrent/download/DC3F9C674142698709290C1B49071EA46A5E5C8E&tr=udp://open.demonii.com:1337/announceudp://tracker.openbittorrent.com:80udp://tracker.coppersurfer.tk:6969udp://glotorrents.pw:6969/announceudp://tracker.opentrackr.org:1337/announceudp://torrent.gresille.org:80/announceudp://p4p.arenabg.com:1337udp://tracker.leechers-paradise.org:6969`;
-};
-
 const ApiCall = (path, callback) => {
 	fetch(`${api}${path}`)
 		.then((response) => response.json())
 		.then((data) => {
+			if (data.data.movie_count === 0){
+				console.error("There has been an error. Probably, the movie you were searching for doesnt exist.")
+				alert("Error! La pelicula que estabas buscando no se encontró. Intenta buscar el título en ingles o filtrar por año.")
+			}else{
 			callback(data);
+			}
 		});
 };
