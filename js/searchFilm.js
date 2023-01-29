@@ -28,6 +28,7 @@ const CreateNewFilm = (JsonApiOutput) => {
 	data.movies.forEach((movie) => {
 		//? Declara y recolecta la info de las variables que van a ser mostradas en el frontend
 		const background = movie.background_image;
+		const YtsLink = movie.url
 		const img = movie.medium_cover_image;
 		const title = movie.title_long;
 		const ImdbId = movie.imdb_code;
@@ -39,9 +40,12 @@ const CreateNewFilm = (JsonApiOutput) => {
 		lang = firstLetter + lang.slice(1);
 		const date = movie.date_uploaded;
 		const YoutubeTrailerId = movie.yt_trailer_code;
-		const downloadLinks = {};
-		for (let i = 0; i < movie.torrents.length; i++) {
-			downloadLinks[movie.torrents[i].quality] = movie.torrents[i].url;
+		const downloadLinks = movie.torrents
+		if (downloadLinks[1].url !== "1080p") {
+			var singleLink =  downloadLinks[0].url
+		}
+		else {
+			var singleLink = downloadLinks[1].url
 		}
 		//? Rellena el Template con la información de la API
 		const template = `<div class="movie" style="background-image: url('${background}')">
@@ -72,9 +76,9 @@ const CreateNewFilm = (JsonApiOutput) => {
 				<div class="trailer info"><span class="material-symbols-outlined">play_arrow</span> Ver trailer
 				</div>
 			</a>
-			<div class="download info">
+			<a href="${singleLink}" class="not-a download info">
 				<span class="material-symbols-outlined">download</span> Descargar Torrent
-			</div>
+			</a>
 		</div>
 	</div>`;
 		//? Agrega los templates al DOM
