@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Avatar omaigad</title>
+</head>
+<body>
+	<h1 style="margin: 0 auto; display: block;">Avatar</h1>
+	<p>
+		Perdon por los anuncios pero si te molestan podes verlo por Brave <a href="https://brave.com/android">https://brave.com/android</a>
+	</p>
+	<div id="player" class="webtor" />
+    <script>
+        window.webtor = window.webtor || [];
+        window.webtor.push({
+            id: 'player',
+            magnet: 'magnet:?xt=urn:btih:bcc4c81254b7d8ed525f7365d8a75aafb4d220b9&dn=Avatar%20(2009)%20%5bEXTENDED%5d%20%5bREPACK%5d%20%5b1080p%5d%20%5bBluRay%5d%20%5b5.1%5d%20%5bYTS.MX%5d&tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce&tr=udp%3a%2f%2fopen.demonii.com%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80&tr=udp%3a%2f%2ftracker.coppersurfer.tk%3a6969&tr=udp%3a%2f%2fglotorrents.pw%3a6969%2fannounce&tr=udp%3a%2f%2ftorrent.gresille.org%3a80%2fannounce&tr=udp%3a%2f%2fp4p.arenabg.com%3a1337&tr=udp%3a%2f%2ftracker.leechersparadise.org%3a6969&tr=udp%3a%2f%2ftracker.leechers-paradise.org%3a6969%2fannounce&tr=udp%3a%2f%2f9.rarbg.to%3a2710%2fannounce&tr=udp%3a%2f%2fp4p.arenabg.ch%3a1337%2fannounce&tr=udp%3a%2f%2ftracker.cyberia.is%3a6969%2fannounce&tr=http%3a%2f%2fp4p.arenabg.com%3a1337%2fannounce&tr=udp%3a%2f%2fopen.tracker.cl%3a1337%2fannounce',
+            on: function(e) {
+                if (e.name == window.webtor.TORRENT_FETCHED) {
+                    console.log('Torrent fetched!', e.data);
+                }
+                if (e.name == window.webtor.TORRENT_ERROR) {
+                    console.log('Torrent error!');
+                }
+            },
+            poster: 'https://via.placeholder.com/1920x1080/ffff/',
+            subtitles: [
+                {
+                    srclang: 'es',
+                    label: 'Subtitulos',
+                    src: './avatar.srt',
+                    default: true,
+                }
+            ],
+            lang: 'en',
+            i18n: {
+                en: {
+                    common: {
+                        "prepare to play": "Preparing Video Stream... Please Wait...",
+                    },
+                    stat: {
+                        "seeding": "Seeding",
+                        "waiting": "Client initialization",
+                        "waiting for peers": "Waiting for peers",
+                        "from": "from",
+                    },
+                },
+            },
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@webtor/embed-sdk-js/dist/index.min.js" charset="utf-8" async></script>
+</body>
+</html>
