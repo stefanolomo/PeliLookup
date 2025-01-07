@@ -4,7 +4,6 @@
 
 Try out the app here: [PeliLookup](https://pelilookup.netlify.app) 🌐
 
----
 
 ## **Features 🚀**
 
@@ -13,7 +12,6 @@ Try out the app here: [PeliLookup](https://pelilookup.netlify.app) 🌐
 - **User-Friendly Interface** 🖥️: Clean and easy-to-navigate design for smooth browsing.
 - **Contribute** 🤝: Want to improve the app? Fork the repo and submit a pull request!
 
----
 
 ## **Usage 📝**
 
@@ -22,7 +20,6 @@ Try out the app here: [PeliLookup](https://pelilookup.netlify.app) 🌐
 3. Click on a movie to view its available download options.
 4. Click on the desired download link to start your download. 📥
 
----
 
 ## **Contributing 🤝**
 
@@ -33,12 +30,10 @@ We welcome contributions! If you want to help improve **PeliLookup**, please fol
 3. Make your changes and test them.
 4. Submit a pull request with a description of your changes.
 
----
 
 ## **License 📄**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
 
 Happy movie browsing! 🎥🍿
