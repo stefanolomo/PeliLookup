@@ -2,7 +2,7 @@
 
 **PeliLookup** is a web application that leverages the official YTS API (yts.mx or yts.ag) to search for movies and their download links. It offers a simple and intuitive interface to browse through available content and find your favorite films.
 
-Try out the app here: [PeliLookup](https://stefanolomo.github.io/pelilookup) 🌐
+Try out the app here: [PeliLookup](https://stefanolomo.github.io/PeliLookup/) 🌐
 
 
 ## **Features 🚀**
